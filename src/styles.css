@@ -1,0 +1,244 @@
+.hero {
+  width: 100%;
+}
+
+.hero--overlay {
+  color: #ffffff;
+  position: absolute;
+  width: 100%;
+  background-color: #1a1a1a;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.hero--overlay--h1 {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Raleway';
+  margin: 10px;
+}
+
+.hero--overlay--p {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin: 10px;
+}
+
+#boton {
+  text-align: center;
+}
+
+.hero--overlay--button {
+  font-family: 'Raleway';
+  width: 100px;
+  background-color: #E8C4B8;
+  border-radius: 8px;
+  color: #1a1a1a;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+video {
+  z-index: 0;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;
+}
+
+.footer {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  color: #E8C4B8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1a1a1a;
+}
+
+.footer--svg {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.navbar {
+  font-family: 'Pacifico', cursive;
+  z-index: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1a1a1a;
+}
+
+.navbar--link {
+  font-size: 28px;
+  color: #E8C4B8;
+  text-decoration: none;
+}
+
+#description {
+  margin-top: -60px;
+  padding-top: 60px;
+  position: relative;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.flex_container {
+  font-family: 'Roboto', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+}
+
+.flex_item {
+  display: inline-block;
+  text-align: center;
+  -webkit-box-flex: 33%;
+      -ms-flex: 33%;
+          flex: 33%;
+  width: 100%;
+}
+
+main > img {
+  border-radius: 0px;
+  width: 200px;
+}
+
+img {
+  text-align: center;
+  max-width: 550px;
+  max-height: 500px;
+  display: block;
+  margin: auto;
+  border-radius: 28px;
+}
+
+#description > img {
+  border-radius: 10px;
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (auto)[5];
+      grid-template-rows: repeat(5, auto);
+}
+
+.grid--item--num1 {
+  background-color: lightgray;
+  grid-column: span 10;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#container > h2 {
+  text-align: center;
+  grid-column: span 12;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.grid--item--num1 > div > img {
+  padding: 20px;
+  border-radius: 34px;
+  width: 300px;
+}
+
+#box {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.grid--item--num2 {
+  text-align: center;
+  font-family: 'Comfortaa', sans-serif;
+  padding: 10px;
+  color: #E8C4B8;
+  background-color: #1a1a1a;
+  grid-column: span 2;
+}
+
+.grid--item--num2 > div > img {
+  width: 100px;
+}
+
+@media screen and (max-width: 576px) {
+  .flex_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .flex_item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #description > p {
+    font-size: 15px;
+    text-align: start;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .grid--item--num1 {
+    grid-column: span 12;
+  }
+  .grid--item--num2 {
+    grid-column: span 12;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
