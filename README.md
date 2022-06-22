@@ -10,7 +10,7 @@ la web desde el siguiente enlace:
 Esta landing page cumple todos los requisitos necesarios de cada asignatura.
 Dispone de Flexbox, Grid layouts, media queries, Sass, SVGs, sonidos, vídeo, animejs, Python y logo animado.
 
-El esquema de colores toma como color principal el #E8C4B8, color basado en las keycaps más famosas de teclado, GMK Olivia.
+El esquema de colores complementario toma como color principal el #E8C4B8, color basado en las keycaps más famosas de teclado, GMK Olivia.
 Se combina con un negro muy oscuro #1A1A1A, sin llegar a ser puro, que ofrece un excelente contraste y legibilidad, consiguiendo
 un ratio de contraste de 10.79:1 en [webaim.org](https://webaim.org/resources/contrastchecker/).
 
