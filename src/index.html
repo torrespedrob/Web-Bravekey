@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Bravekey</title>
-  <base href="/Web_Bravekey/"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,19 +11,21 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Pacifico&family=Raleway:wght@100;200;300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap"
     rel="stylesheet">
+  <link href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
 
 
 <body>
   <div class="navbar">
-    <a class="navbar--link" href="#"><img src='./assets/svg/logo.svg'></a>
+    <a id="logo" class="navbar--link" href="#"><img src='./assets/svg/logo.svg'></a>
   </div>
   <div>
     <header class="hero" role="banner">
       <div class="hero--overlay">
         <h1 class="hero--overlay--h1">Bienvenido a Bravekey</h1>
         <p class="hero--overlay--p">Tu app de teclados mecánicos personalizados</p>
-        <div id="boton">
+        <div id="boton" class="button">
           <a href="#description" class="hero--overlay--button">Introducción</a>
         </div>
       </div>
@@ -35,6 +36,8 @@
   </div>
   <div id="description">
     <h1>¿Qué es Bravekey?</h1>
+
+    Your browser does not support the HTML canvas tag.</canvas>
     <p>Bravekey es una app de Android basada en Kotlin que permite a los usuarios
       mantener un registro de sus teclados guardados, con todo tipo de detalles.<br><br>
       Desde la placa base, hasta los switches mecánicos utilizados y las modificaciones realizadas, Bravekey es el mejor
@@ -67,15 +70,14 @@
     </div>
   </div>
   <div id="container">
-    <h2>Tecnologías utilizadas</h2>
+    <h2><canvas id="canvas" width="340" height="80"></canvas></h2>
     <main class="grid--item--num1">
-      
       <div id="box">
-        <img src='./assets/images/android.jpg'><br>
-        <img src='./assets/images/kotlin.jpg'><br>
-        <img src='./assets/images/firebase.png'><br>
-        <img src='./assets/images/glide.png'><br>
-        <img src='./assets/svg/lottie.svg'><br>
+        <img class="box--animejs" src='./assets/images/android.jpg'><br>
+        <img class="box--animejs" src='./assets/images/kotlin.jpg'><br>
+        <img class="box--animejs" src='./assets/images/firebase.png'><br>
+        <img class="box--animejs" src='./assets/images/glide.png'><br>
+        <img class="box--animejs" src='./assets/svg/lottie.svg'><br>
       </div>
 
     </main>
@@ -101,11 +103,43 @@
 
   </div>
   <footer class="footer">
+    <p>
+      <py-script>
+        import datetime
+        now = datetime.datetime.now()
+        now.strftime("%m/%d/%Y, %H:%M - Powered by Python")
+      </py-script>
+    </p>
     <p>Aplicación realizada por <a href="https://github.com/torrespedrob/BraveKey-Android">Pedro Torres
         <img class="footer--svg" src="./assets/svg/github.svg"></p>
   </footer>
-
-
 </body>
+<script src="./assets/animation/anime.min.js"></script>
+<script>
+  var logo = document.querySelector('#logo');
+
+  function animateButton(scale, duration, elasticity) {
+    anime.remove('#logo');
+    anime({
+      targets: logo,
+      scale: scale,
+      duration: duration,
+      elasticity: elasticity
+    });
+  }
+
+  function enterButton() { animateButton(1.2, 800, 400) };
+  function leaveButton() { animateButton(1.0, 600, 300) };
+
+  logo.addEventListener('mouseenter', enterButton, false);
+  logo.addEventListener('mouseleave', leaveButton, false);
+
+</script>
+<script>
+  var c = document.getElementById("canvas");
+  var ctx = c.getContext("2d");
+  ctx.font = "28px Comfortaa";
+  ctx.strokeText("Tecnologías utilizadas", 10, 50);
+</script>
 
 </html>

@@ -10,8 +10,6 @@
     text-align: center
     font-family: 'Raleway', sans-serif
 
-
-
 .flex_container 
     font-family: 'Roboto', sans-serif
     display: flex
@@ -27,11 +25,8 @@
     width: 100%
     
 main > img 
-    
     border-radius: 0px
     width: 200px
-
-
 
 img 
     text-align: center
@@ -40,7 +35,6 @@ img
     display: block
     margin: auto
     border-radius: 28px
-    
         
 #description > img
     border-radius: 10px
@@ -64,6 +58,10 @@ img
     grid-column: span 12
     align-self: center
     font-family: 'Comfortaa', sans-serif
+
+#container > h2 > canvas
+    border: 4px solid #d3d3d3 
+    border-radius: 14px
     
 
 .grid--item--num1 > div > img
@@ -83,29 +81,53 @@ img
     color: $olivia
     background-color: $dark
     grid-column: span 2
+
 .grid--item--num2 > div > img
     width: 100px
 
+@media screen and (max-width: 850px)
+    .hero--overlay
+        height: 30%
+
+    .hero--overlay--h1
+        padding-top: 40px
+        font-size: 28px
+        margin: 10px
+
+    .hero--overlay--p
+        font-size: 20px
+        margin: 10px
+
+    .grid--item--num1
+        grid-column: span 12
+
+    .grid--item--num2
+        grid-column: span 12   
+
 @media screen and (max-width: 576px) 
+    .hero--overlay
+        height: 25%
+
+    .hero--overlay--h1
+        padding-top: 20px
+        font-size: 22px
+        margin: 8px
+
+    .hero--overlay--p
+        font-size: 16px
+        margin: 8px
+
     .flex_container
         flex-direction: column
         
-    
-
     .flex_item
         flex-wrap: wrap
-        
-    
 
     #description > p
         font-size: 15px
         text-align: start
         margin: 10px
-@media screen and (max-width: 850px)
-    .grid--item--num1
-        grid-column: span 12
-    .grid--item--num2
-        grid-column: span 12        
+     
 
     
         
