@@ -20,6 +20,7 @@
   <div class="navbar">
     <a id="logo" class="navbar--link" href="#"><img src='./assets/svg/logo.svg'></a>
   </div>
+  
   <div>
     <header class="hero" role="banner">
       <div class="hero--overlay">
@@ -27,6 +28,8 @@
         <p class="hero--overlay--p">Tu app de teclados mecánicos personalizados</p>
         <div id="boton" class="button">
           <a href="#description" class="hero--overlay--button">Introducción</a>
+          <app-root></app-root>
+          
         </div>
       </div>
       <video autoplay="true" id="heroVideo" loop="true" muted="true" poster='./assets/images/thumbnail.png'>
@@ -36,13 +39,11 @@
   </div>
   <div id="description">
     <h1>¿Qué es Bravekey?</h1>
-
-    Your browser does not support the HTML canvas tag.</canvas>
-    <p>Bravekey es una app de Android basada en Kotlin que permite a los usuarios
-      mantener un registro de sus teclados guardados, con todo tipo de detalles.<br><br>
-      Desde la placa base, hasta los switches mecánicos utilizados y las modificaciones realizadas, Bravekey es el mejor
-      sitio para almacenar tu colección de manera simple.
-    </p><br>
+ <p>Bravekey es una app de Android basada en Kotlin que permite a los usuarios
+  mantener un registro de sus teclados guardados, con todo tipo de detalles.<br><br>
+  Desde la placa base, hasta los switches mecánicos utilizados y las modificaciones realizadas, Bravekey es el mejor
+  sitio para almacenar tu colección de manera simple.
+</p><br>
     <img src='./assets/images/description.jpg'><br>
     <p>Esta app utiliza Firebase para el manejo de usuarios y para la base de datos.
       Gracias a esto los usuarios podrán almacenar su imagen y sus teclados siempre que
@@ -114,6 +115,12 @@
         <img class="footer--svg" src="./assets/svg/github.svg"></p>
   </footer>
 </body>
+<script>
+  var c = document.getElementById("canvas");
+  var ctx = c.getContext("2d");
+  ctx.font = "28px Comfortaa";
+  ctx.strokeText("Tecnologías utilizadas", 10, 50);
+</script>
 <script src="./assets/animation/anime.min.js"></script>
 <script>
   var logo = document.querySelector('#logo');
@@ -135,11 +142,6 @@
   logo.addEventListener('mouseleave', leaveButton, false);
 
 </script>
-<script>
-  var c = document.getElementById("canvas");
-  var ctx = c.getContext("2d");
-  ctx.font = "28px Comfortaa";
-  ctx.strokeText("Tecnologías utilizadas", 10, 50);
-</script>
+
 
 </html>
